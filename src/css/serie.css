@@ -1,0 +1,97 @@
+#seasons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    row-gap: 15px;
+    width: 855px;
+    position: relative;
+    top: 70px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.season {
+    box-shadow: 0px 0px 8px 0px rgb(100 100 100 /30%);
+    padding: 1%;
+    cursor: pointer;
+    border-radius: 5px 5px 5px;
+
+    transition: box-shadow 200ms ease-in;
+}
+
+.season:hover {
+    box-shadow: 0px 0px 3px 0px white;
+
+    transition: box-shadow 200ms ease-in;
+}
+
+
+#episodes {
+    width: 855px;
+    margin-right: auto;
+    margin-left: auto;
+
+    top: 100px;
+    position: relative;
+}
+
+.episode {
+    display: flex;
+    gap: 50px;
+
+    height: 215px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 15px;
+    box-shadow: 0 0 8px 0 rgb(100 100 100 / 30%);
+    cursor: pointer;
+
+    border-radius: 5px 5px 5px;
+
+    transition: box-shadow 200ms ease-in;
+}
+
+.episode:hover {
+    box-shadow: 0 0 3px 0 white;
+
+    transition: box-shadow 200ms ease-in;
+}
+
+.episode > .img {
+    width: 300px;
+    height: 170px;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(0%, -50%);
+}
+
+.episode > .img > div {
+    height: 170px;
+    overflow: hidden;
+}
+
+.episode > div > div > img {
+    width: 300px;
+}
+
+.episode > div > h2 {
+    margin-bottom: 0;
+}
+
+.episode_nb {
+    margin-top: 0;
+}
+
+.episode_nb ~ p {
+    overflow: scroll;
+    height: 150px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.episode_nb ~ p::-webkit-scrollbar {
+    display: none;
+}

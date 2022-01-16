@@ -1,0 +1,67 @@
+#media {
+    margin-bottom: 200px;
+}
+
+iframe {
+    width: 855px;
+    height: 465px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    top: 235px;
+    border: none;
+}
+
+#trailer {
+    width: 100%;
+    height: 468px;
+    top: 40px;
+    position: relative;
+}
+
+#title_bg {
+    background-color: rgb(23 23 23 /97%);
+    position: relative;
+}
+
+#title {
+    display: flex;
+    position: relative;
+
+    width: 700px;
+    height: 300px;
+    
+    top: 130px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#title > img {
+    width: 200px;
+    height: 300px;
+    top: -60px;
+    position: relative;
+    left: -78px;
+}
+
+#title_infos > h1 {
+    margin-bottom: 0;
+}
+
+#title_infos > #year {
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+#plot {
+    height: 65%;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#plot::-webkit-scrollbar {
+    display: none;
+}

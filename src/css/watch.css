@@ -1,0 +1,70 @@
+.video {
+    top: 100px;
+    height: 468px;
+    position: relative;
+}
+
+#infos {
+    text-align: center;
+    top: 70px;
+    position: relative;
+}
+
+#infos > p {
+    font-size: 1.3em;
+}
+
+#back_button {
+    position: absolute;
+    top: 135px;
+    left: 150px;
+    width: 48px;
+
+    filter: invert(1);
+
+    cursor: pointer;
+    z-index: 1;
+}
+
+#nav_buttons {
+    top: 200px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    width: fit-content;
+}
+
+#nav_buttons > button {
+    font-size: 1.5em;
+    font-family: Tahoma;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: transparent;
+    border: none;
+    box-shadow: 0 0 8px 0 rgb(100 100 100 / 30%);
+    border-radius: 5px 5px 5px;
+    cursor: pointer;
+
+    margin: 30px;
+    width: 250px;
+
+    transition: box-shadow 200ms ease-in-out;
+}
+
+#nav_buttons > button:hover {
+    box-shadow: 0 0 3px 0 white;
+    transition: box-shadow 200ms ease-in-out;
+}
+
+#nav_buttons > button:disabled {
+    color:rgb(100 100 100 / 30%)
+}
+
+#nav_buttons > button:disabled:hover {
+    box-shadow: 0 0 8px 0 rgb(100 100 100 / 30%);
+    cursor: default;
+}

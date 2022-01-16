@@ -1,0 +1,26 @@
+#watch_button {
+    top: 70px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    font-size: 1.5em;
+    font-family: Tahoma;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: transparent;
+    border: none;
+    box-shadow: 0 0 8px 0 rgb(100 100 100 / 30%);
+    border-radius: 5px 5px 5px;
+    cursor: pointer;
+
+    transition: box-shadow 200ms ease-in-out;
+}
+
+#watch_button:hover {
+    box-shadow: 0 0 3px 0 white;
+    transition: box-shadow 200ms ease-in-out;
+}
