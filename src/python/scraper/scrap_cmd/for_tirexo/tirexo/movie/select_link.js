@@ -1,0 +1,1 @@
+document.getElementsByClassName("table-responsive")[0].getElementsByTagName("tbody")[0].getElementsByTagName("tr")[0].getElementsByTagName("a")[0].click()

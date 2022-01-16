@@ -1,0 +1,1 @@
+document.getElementById("load_form").style.display == 'none'

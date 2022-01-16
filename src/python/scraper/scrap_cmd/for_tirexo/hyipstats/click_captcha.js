@@ -1,0 +1,1 @@
+document.getElementById("sumbit_btn").click()

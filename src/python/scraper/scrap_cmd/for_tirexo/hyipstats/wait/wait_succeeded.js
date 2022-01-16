@@ -1,0 +1,1 @@
+document.getElementById('captcha').getElementsByClassName('geetest_success_radar_tip_content')[0].innerText != 'Succeeded'

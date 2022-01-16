@@ -1,0 +1,1 @@
+document.getElementById("dl").getElementsByTagName("form")[0].getElementsByTagName("a")[0].click()

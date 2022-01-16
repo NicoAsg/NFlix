@@ -1,0 +1,1 @@
+document.getElementById("captcha").getElementsByClassName("geetest_radar_tip")[0].click()

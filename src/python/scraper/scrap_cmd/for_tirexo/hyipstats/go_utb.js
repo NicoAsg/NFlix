@@ -1,0 +1,1 @@
+document.getElementsByClassName("show")[0].getElementsByTagName("a")[0].click()
