@@ -3,12 +3,14 @@ import ListEpisodes from './ListEpisodes'
 import { APISerie } from '../../../interfaces/APISerie'
 import { APIEpisode } from '../../../interfaces/APIEpisode'
 import { api_key, url } from '../../../utils/imdb'
+import Loading from '../../Loading'
 
 const Seasons = ({ serie, setEpisodes }: { serie: APISerie, setEpisodes: React.Dispatch<React.SetStateAction<JSX.Element>>}): JSX.Element => {
     const [ clickOnce, setClickOnce ] = useState<boolean>(false)
 
     const selectSeason = (season: HTMLDivElement): void => {
         const seasonList = document.getElementsByClassName("season") as HTMLCollectionOf<HTMLDivElement>
+            setEpisodes(<Loading />)
         
             for (let i = 0; i < seasonList.length; i++) {
                 seasonList[i].style.backgroundColor = ""
@@ -41,7 +43,8 @@ const Seasons = ({ serie, setEpisodes }: { serie: APISerie, setEpisodes: React.D
             serie.tvSeriesInfo.seasons.map(season => 
                 <div className='season' id={ season } key={ season } onClick={ (event) => selectSeason(event.target as HTMLDivElement) }>
                     Season { season }
-                </div>)
+                </div>
+            )
             }
         </div>
     )

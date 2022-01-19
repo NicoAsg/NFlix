@@ -6,5 +6,6 @@ Requirements:
 
 ## Install Python bindings for Selenium
 pip install selenium
+pip install undetected-chromedriver
 ## Intall uvicorn
 apt install uvicorn

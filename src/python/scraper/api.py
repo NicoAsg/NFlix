@@ -4,6 +4,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import JavascriptException
 
+import undetected_chromedriver as uc
+
 from _thread import *
 import signal, sys
 from time import sleep
@@ -21,7 +23,7 @@ from scrap.Movie import Movie
 from scrap.Serie import Serie
 
 # Run with:
-# uvicorn api:app --reload --host=
+# uvicorn api:app --reload --host=137.74.197.63
 
 
 app = FastAPI()
@@ -49,12 +51,12 @@ async def test(rcv: Receive, request: Request):
 @app.post("/video/")
 async def video(rcv: Receive, request: Request):
     if rcv.type == "Anime":
-        content = new_connection(Anime(rcv.title, rcv.season, rcv.episode).commands(), request.client.host)
+        content = new_connection(Anime(rcv.title, rcv.season, rcv.episode).commands(), "")
     elif rcv.type == "Serie":
-        content = new_connection(Serie(rcv.title, rcv.season, rcv.episode).commands(), request.client.host)
+        content = new_connection(Serie(rcv.title, rcv.season, rcv.episode).commands(), "")
     elif rcv.type == "Movie":
         print(Movie(rcv.title).commands())
-        content = new_connection(Movie(rcv.title).commands(), request.client.host)
+        content = new_connection(Movie(rcv.title).commands(), "")
     else:
         content = { "error": "wrong type" }
     headers = { 
@@ -101,9 +103,10 @@ def new_connection(commands: list[str], client: str):
 
     driver = findDriver(client) 
     if driver == None:      # Create a driver if none exists
-        options = webdriver.ChromeOptions()
-        options.add_argument("--disable-blink-features=AutomationControlled")
-        driver = Scraper(webdriver.Chrome(options=options), client)
+        uc_options = uc.ChromeOptions()
+        uc_options.add_argument("--start-maximized")
+        uc_options.add_argument("--disable-popup-blocking")
+        driver = Scraper(uc.Chrome(options=uc_options), client)
         drivers.append(driver)
     
     reply = run_cmds(driver, commands)

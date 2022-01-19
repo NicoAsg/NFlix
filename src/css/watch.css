@@ -2,6 +2,8 @@
     top: 100px;
     height: 468px;
     position: relative;
+    overflow: hidden;
+    background-color: black;
 }
 
 #infos {
@@ -16,8 +18,8 @@
 
 #back_button {
     position: absolute;
-    top: 135px;
-    left: 150px;
+    top: 210px;
+    left: 140px;
     width: 48px;
 
     filter: invert(1);
@@ -67,4 +69,13 @@
 #nav_buttons > button:disabled:hover {
     box-shadow: 0 0 8px 0 rgb(100 100 100 / 30%);
     cursor: default;
+}
+
+.video > #loading {
+    top: 0;
+}
+
+.video > #loading > .lds-ring {
+    top: 50%;
+    transform: translateY(-50%);
 }

@@ -24,6 +24,7 @@ function Header(): JSX.Element {
             .then((response: Response) => response.json()
             .then((json: { results: Array<APIResult> }) => {
                 searching = false
+                setLoading(<div></div>)
                 navigate("/search", { state: json.results })
             }))
     }
