@@ -2,10 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 
+import undetected_chromedriver as uc
+
 class Scraper:
 
     ### Utils ###
-    def __init__(self, driver: webdriver.Chrome, client: str):
+    def __init__(self, driver: uc.Chrome, client: str):
         self.driver = driver
         self.client = client
     def getDriver(self):

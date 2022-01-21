@@ -1,7 +1,7 @@
 from scrap.Util import cmd_builder, COOKIE
 
 class Serie:
-    def __init_(self, title: str, season: str, episode: str):
+    def __init__(self, title: str, season: str, episode: str):
         self.title = title
         self.season = season
         self.episode = episode
@@ -10,7 +10,8 @@ class Serie:
     def commands(self) -> list[str]:
         return [
             # Tirexo: Load Tirexo search page and search the title
-            cmd_builder("load", "https://www2.tirexo.work/?do=index_alpha&category=15&lettre={}".format(self.title[0])),
+            """exec("start_letter = '""" + self.title[0] + """'")""",
+            """exec("category = '15'")""",
             "exec(open('scrap_cmd/for_tirexo/tirexo/search_alpha.py').read())",
             
             # Tirexo: Select season, quality and episode

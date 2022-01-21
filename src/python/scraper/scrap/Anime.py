@@ -11,7 +11,8 @@ class Anime :
     def commands(self) -> list[str]:
         return [
             # Tirexo: Load Tirexo search page and search the title
-            cmd_builder("load", "https://www2.tirexo.work/?do=index_alpha&category=32&lettre={}".format(self.title[0])),
+            """exec("start_letter = '""" + self.title[0] + """'")""",
+            """exec("category = '32'")""",
             "exec(open('scrap_cmd/for_tirexo/tirexo/search_alpha.py').read())",
 
             # Tirexo: Select season, quality and episode

@@ -1,1 +1,1 @@
-return document.getElementsByTagName("textarea")[0].value
+return document.getElementsByTagName('textarea')[0].value

@@ -1,4 +1,4 @@
-COOKIE: str = "{ 'name' : 'xfss', 'value' : 'vp3wd5w68qhtm0vb' }"
+COOKIE: str = "{ 'name' : 'xfss', 'value' : 'f8csha6m3kv7src0' }"
 def cmd_builder(func: str, args: str = None, constants: bool = None, no_quotes: bool = None) -> str:
     if (args):
         if (constants):

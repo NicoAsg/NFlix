@@ -1,1 +1,1 @@
-export const url = "http://137.74.197.63:8000/video/"
+export const url = "http://94.250.202.163:8000/video/"

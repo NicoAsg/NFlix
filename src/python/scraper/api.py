@@ -23,7 +23,7 @@ from scrap.Movie import Movie
 from scrap.Serie import Serie
 
 # Run with:
-# uvicorn api:app --reload --host=137.74.197.63
+# uvicorn api:app --reload --host=94.250.202.163
 
 
 app = FastAPI()
@@ -104,7 +104,7 @@ def new_connection(commands: list[str], client: str):
     driver = findDriver(client) 
     if driver == None:      # Create a driver if none exists
         uc_options = uc.ChromeOptions()
-        uc_options.add_argument("--start-maximized")
+        # uc_options.add_argument("--start-maximized")
         uc_options.add_argument("--disable-popup-blocking")
         driver = Scraper(uc.Chrome(options=uc_options), client)
         drivers.append(driver)
@@ -124,10 +124,10 @@ def run_cmds(driver, cmds):
             
             # Run the command
             cmd_return = str(eval(command))
+            print("Returns: " + cmd_return)
             if(cmd_return != "None"):
                 reply += cmd_return
                 print(reply)
-            print("Returns: " + cmd_return)
 
             sleep(0.000177 * randint(1000, 10000))
         except NameError as err:

@@ -1,3 +1,3 @@
-const title = 'Demon Slayer: Kimetsu no Yaiba'
-const season = 1
+const title = 'Game of Thrones'
+const season = 4
 const episode = 1
